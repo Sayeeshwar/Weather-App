@@ -31,11 +31,13 @@ window.addEventListener("load",()=>{
                     
                     if(degreeSymbol.textContent=="F")
                     {
+                        tempDegree.textContent = Math.round((temperature-32)*(5/9));
                         degreeSymbol.textContent="C";
                     }
                     else
                     {
                         degreeSymbol.textContent="F";
+                        tempDegree.textContent = temperature;
                     }
                 })
             });
