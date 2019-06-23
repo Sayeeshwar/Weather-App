@@ -21,9 +21,10 @@ window.addEventListener("load",()=>{
                 locationTimezone.textContent=data.timezone;
                 tempDegree.textContent=temperature;
                 tempDescription.textContent=summary;
-
-
+                
+                
             })
         })
     }
+
 })
