@@ -4,6 +4,8 @@ window.addEventListener("load",()=>{
     let locationTimezone = document.querySelector(".location-timezone");
     let tempDegree = document.querySelector(".temp-degree");
     let tempDescription = document.querySelector(".temp-description");
+    let degreeSection = document.querySelector(".degree-section");
+    const degreeSymbol = document.querySelector(".degree-section span");
 
     if(navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(position => {
@@ -23,6 +25,19 @@ window.addEventListener("load",()=>{
                 tempDescription.textContent=summary;
                 //Set Icon
                 setIcons(icon,document.querySelector(".icon"));
+
+                //Change F to C
+                degreeSection.addEventListener('click',()=>{
+                    
+                    if(degreeSymbol.textContent=="F")
+                    {
+                        degreeSymbol.textContent="C";
+                    }
+                    else
+                    {
+                        degreeSymbol.textContent="F";
+                    }
+                })
             });
         });
     }
