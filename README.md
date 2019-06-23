@@ -1,0 +1,1 @@
+This project uses a weather API from Darksky to get the user's geographical area and it's weather - temperature and a short description. It involves an animation to inform the weather conditions. By clicking on the temperature, the user can toggle between °F and °C.
