@@ -29,14 +29,14 @@ window.addEventListener("load",()=>{
                 //Change F to C
                 degreeSection.addEventListener('click',()=>{
                     
-                    if(degreeSymbol.textContent=="F")
+                    if(degreeSymbol.textContent=="°F")
                     {
                         tempDegree.textContent = Math.round((temperature-32)*(5/9));
-                        degreeSymbol.textContent="C";
+                        degreeSymbol.textContent="°C";
                     }
                     else
                     {
-                        degreeSymbol.textContent="F";
+                        degreeSymbol.textContent="°F";
                         tempDegree.textContent = temperature;
                     }
                 })
@@ -46,7 +46,7 @@ window.addEventListener("load",()=>{
 
     function setIcons(icon, iconID)
     {
-        const skycons = new Skycons({color:"white"});
+        const skycons = new Skycons({color:"black"});
         const currentIcon = icon.replace(/-/g,"_").toUpperCase();
         skycons.play();
         return skycons.set(iconID,Skycons[currentIcon]);
