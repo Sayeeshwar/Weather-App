@@ -16,7 +16,7 @@ window.addEventListener("load",()=>{
                 return response.json();
             })
             .then(data => {
-                const {temperature, summary}= data.currently;
+                const {temperature, summary, icon}= data.currently;
                 //SET DOM Elements
                 locationTimezone.textContent=data.timezone;
                 tempDegree.textContent=temperature;
